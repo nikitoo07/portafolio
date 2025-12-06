@@ -171,11 +171,88 @@
             text-decoration: none;
             font-weight: 500;
         }
-        .tema-oscuro {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        
+        /* Tema oscuro: agrega al final de styles.css */
+
+body,
+header,
+.skill-item,
+.timeline-item,
+.resources-list a,
+.contact-info,
+footer {
+    transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+/* Clase que activa el tema oscuro */
+body.oscuro {
+    background-color: #0f1724;   /* fondo general oscuro */
+    color: #e6eef8;              /* texto claro */
+}
+
+/* header oscuro */
+body.oscuro header {
+    background: linear-gradient(135deg,#04293a 0%,#08304a 100%);
+    color: #e6eef8;
+}
+
+/* cards y contenedores */
+body.oscuro .skill-item,
+body.oscuro .timeline-item,
+body.oscuro .contact-info,
+body.oscuro .resources-list a {
+    background: #0b1220;
+    border-color: #213445;
+    color: #dbe9f8;
+}
+
+/* barras de habilidades */
+body.oscuro .skill-bar-bg {
+    background: #07202b;
+}
+body.oscuro .skill-bar-fill {
+    box-shadow: none;
+}
+
+/* enlaces */
+body.oscuro a {
+    color: #7ec8ff;
+}
+body.oscuro a:hover {
+    color: #aee6ff;
+}
+
+/* botones */
+body.oscuro .project-button {
+    background-color: #144b63;
+    color: #e6eef8;
+    border: 1px solid #1b5f74;
+}
+body.oscuro .project-button .link {
+    color: #e6eef8;
+}
+
+/* footer */
+body.oscuro footer {
+    background: #071928;
+    color: #9fcfe8;
+}
+
+/* pequeñas mejoras de accesibilidad/contraste */
+body.oscuro .profile-img {
+    border-color: #0b202b;
+}
+body.oscuro h2 {
+    color: #4fd1ff;
+}
+body.oscuro p {
+    color: #cbd5e1;
+}
+body.oscuro strong {
+    color: #e6eef8;
+}
+
+/* animaciones suaves al cambiar tema */
+html { transition: background-color .25s ease, color .25s ease; }
     </style>
 </head>
 <body>
@@ -184,6 +261,7 @@
             <img src="images/caballo.png" alt="Foto de perfil" class="profile-img">
             <h1>Niko</h1>
             <p>Desarrollador Web Frontend</p>
+            <button id="tema-btn" class="project-button" type="button">Tema oscuro</button>
         </div>
     </header>
     <main class="container">
@@ -240,8 +318,6 @@
             </div>
         </section>
         <script src="script.js"></script>
-        <button class="tema-button" onclick="cambiarTema()">Cambiar tema</button>
-
     </main>
 
     <footer>
