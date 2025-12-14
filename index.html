@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-                * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fbff;
             color: #1a1a2e;
             line-height: 1.7;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 24px;
         }
+
         header {
             background: linear-gradient(135deg, #0077b6 0%, #00a8e8 100%);
             color: white;
             padding: 60px 24px;
             text-align: center;
         }
+
         header h1 {
             font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 8px;
         }
+
         header p {
             font-size: 1.1rem;
             opacity: 0.95;
             font-weight: 400;
         }
+
         .profile-img {
             width: 140px;
             height: 140px;
@@ -47,51 +54,61 @@
             border: 4px solid white;
             margin-bottom: 20px;
         }
+
         section {
             padding: 50px 0;
             border-bottom: 1px solid #e0e8f0;
         }
+
         section:last-of-type {
             border-bottom: none;
         }
+
         h2 {
             font-size: 1.5rem;
             color: #0077b6;
             margin-bottom: 20px;
             font-weight: 600;
         }
+
         .about p {
             font-size: 1rem;
             color: #333;
             margin-bottom: 16px;
         }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
         }
+
         .skill-item {
             background: white;
             padding: 20px;
             border-radius: 8px;
             border: 1px solid #e0e8f0;
         }
+
         .skill-item strong {
             display: block;
             margin-bottom: 10px;
             color: #1a1a2e;
             font-weight: 600;
         }
+
         .skill-bar-bg {
             background: #e8f4fc;
             border-radius: 4px;
             height: 8px;
             overflow: hidden;
         }
+
         .skill-bar-fill {
             height: 100%;
             border-radius: 4px;
         }
+
         .timeline-item {
             display: flex;
             gap: 20px;
@@ -101,19 +118,23 @@
             border-radius: 8px;
             border-left: 4px solid #0077b6;
         }
+
         .timeline-item .date {
             font-weight: 600;
             color: #0077b6;
             min-width: 90px;
         }
+
         .timeline-item .desc {
             color: #333;
         }
+
         .resources-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 12px;
         }
+
         .resources-list a {
             display: block;
             padding: 16px 20px;
@@ -125,21 +146,25 @@
             font-weight: 500;
             text-align: center;
         }
+
         .contact-info {
             background: white;
             padding: 30px;
             border-radius: 8px;
             border: 1px solid #e0e8f0;
         }
+
         .contact-info p {
             margin-bottom: 12px;
             color: #333;
         }
+
         .contact-info a {
             color: #0077b6;
             text-decoration: none;
             font-weight: 500;
         }
+
         footer {
             background: #0077b6;
             color: white;
@@ -147,17 +172,20 @@
             padding: 30px 24px;
             margin-top: 40px;
         }
+
         footer a {
             color: white;
             text-decoration: none;
             margin: 0 12px;
             font-weight: 500;
         }
+
         footer p {
             margin-top: 12px;
             opacity: 0.9;
             font-size: 0.9rem;
         }
+
         .project-button {
             background-color: #0077b6;
             border: none;
@@ -166,95 +194,108 @@
             cursor: pointer;
             margin-top: 10px;
         }
+
         .project-button .link {
             color: white;
             text-decoration: none;
             font-weight: 500;
         }
+
         /* Tema oscuro: agrega al final de styles.css */
 
-body,
-header,
-.skill-item,
-.timeline-item,
-.resources-list a,
-.contact-info,
-footer {
-    transition: background-color .25s ease, color .25s ease, border-color .25s ease;
-}
+        body,
+        header,
+        .skill-item,
+        .timeline-item,
+        .resources-list a,
+        .contact-info,
+        footer {
+            transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+        }
 
-/* Clase que activa el tema oscuro */
-body.oscuro {
-    background-color: #0f1724;   /* fondo general oscuro */
-    color: #e6eef8;              /* texto claro */
-}
+        /* Clase que activa el tema oscuro */
+        body.oscuro {
+            background-color: #0f1724;
+            /* fondo general oscuro */
+            color: #e6eef8;
+            /* texto claro */
+        }
 
-/* header oscuro */
-body.oscuro header {
-    background: linear-gradient(135deg,#04293a 0%,#08304a 100%);
-    color: #e6eef8;
-}
+        /* header oscuro */
+        body.oscuro header {
+            background: linear-gradient(135deg, #04293a 0%, #08304a 100%);
+            color: #e6eef8;
+        }
 
-/* cards y contenedores */
-body.oscuro .skill-item,
-body.oscuro .timeline-item,
-body.oscuro .contact-info,
-body.oscuro .resources-list a {
-    background: #0b1220;
-    border-color: #213445;
-    color: #dbe9f8;
-}
+        /* cards y contenedores */
+        body.oscuro .skill-item,
+        body.oscuro .timeline-item,
+        body.oscuro .contact-info,
+        body.oscuro .resources-list a {
+            background: #0b1220;
+            border-color: #213445;
+            color: #dbe9f8;
+        }
 
-/* barras de habilidades */
-body.oscuro .skill-bar-bg {
-    background: #07202b;
-}
-body.oscuro .skill-bar-fill {
-    box-shadow: none;
-}
+        /* barras de habilidades */
+        body.oscuro .skill-bar-bg {
+            background: #07202b;
+        }
 
-/* enlaces */
-body.oscuro a {
-    color: #7ec8ff;
-}
-body.oscuro a:hover {
-    color: #aee6ff;
-}
+        body.oscuro .skill-bar-fill {
+            box-shadow: none;
+        }
 
-/* botones */
-body.oscuro .project-button {
-    background-color: #144b63;
-    color: #e6eef8;
-    border: 1px solid #1b5f74;
-}
-body.oscuro .project-button .link {
-    color: #e6eef8;
-}
+        /* enlaces */
+        body.oscuro a {
+            color: #7ec8ff;
+        }
 
-/* footer */
-body.oscuro footer {
-    background: #071928;
-    color: #9fcfe8;
-}
+        body.oscuro a:hover {
+            color: #aee6ff;
+        }
 
-/* pequeñas mejoras de accesibilidad/contraste */
-body.oscuro .profile-img {
-    border-color: #0b202b;
-}
-body.oscuro h2 {
-    color: #4fd1ff;
-}
-body.oscuro p {
-    color: #cbd5e1;
-}
-body.oscuro strong {
-    color: #e6eef8;
-}
+        /* botones */
+        body.oscuro .project-button {
+            background-color: #144b63;
+            color: #e6eef8;
+            border: 1px solid #1b5f74;
+        }
 
-/* animaciones suaves al cambiar tema */
-html { transition: background-color .25s ease, color .25s ease; }
+        body.oscuro .project-button .link {
+            color: #e6eef8;
+        }
+
+        /* footer */
+        body.oscuro footer {
+            background: #071928;
+            color: #9fcfe8;
+        }
+
+        /* pequeñas mejoras de accesibilidad/contraste */
+        body.oscuro .profile-img {
+            border-color: #0b202b;
+        }
+
+        body.oscuro h2 {
+            color: #4fd1ff;
+        }
+
+        body.oscuro p {
+            color: #cbd5e1;
+        }
+
+        body.oscuro strong {
+            color: #e6eef8;
+        }
+
+        /* animaciones suaves al cambiar tema */
+        html {
+            transition: background-color .25s ease, color .25s ease;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -267,8 +308,11 @@ html { transition: background-color .25s ease, color .25s ease; }
     <main class="container">
         <section class="about">
             <h2>Sobre mí</h2>
-            <p>Soy un desarrollador web apasionado por crear sitios modernos y funcionales. Me especializo en tecnologías frontend como HTML, CSS y JavaScript, con un enfoque en código limpio y experiencias de usuario intuitivas.</p>
-            <p>Actualmente continúo ampliando mis conocimientos a través de plataformas como freeCodeCamp, donde he obtenido certificaciones en diseño web responsivo y JavaScript.</p>
+            <p>Soy un desarrollador web apasionado por crear sitios modernos y funcionales. Me especializo en
+                tecnologías frontend como HTML, CSS y JavaScript, con un enfoque en código limpio y experiencias de
+                usuario intuitivas.</p>
+            <p>Actualmente continúo ampliando mis conocimientos a través de plataformas como freeCodeCamp, donde he
+                obtenido certificaciones en diseño web responsivo y JavaScript.</p>
         </section>
 
         <section>
@@ -302,19 +346,27 @@ html { transition: background-color .25s ease, color .25s ease; }
         </section>
         <section>
             <h2>Proyectos</h2>
-            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/tareafisica/" target="_blank">Proyecto Escolar De Física</a></button>
-            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/sol/" target="_blank">Proyecto Escolar De Fisica 2 (sol)</a></button>
-            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/QuizGo-/" target="_blank">Proyecto QuizGo(incompleto)</a></button>
+            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/tareafisica/"
+                    target="_blank">Proyecto Escolar De Física</a></button>
+            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/sol/"
+                    target="_blank">Proyecto Escolar De Fisica 2 (sol)</a></button>
+            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/QuizGo-/"
+                    target="_blank">Proyecto QuizGo(incompleto)</a></button>
         </section>
         <section>
             <h2>Demo</h2>
-            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/demo/" target="_blank">Tienda de ropa</a></button>
-            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/gymdemo/" target="_blank">Gimnasio</a></button>
+            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/demo/"
+                    target="_blank">Catalogo de ropa</a></button>
+            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/gymdemo/"
+                    target="_blank">Gimnasio</a></button>
+            <button class="project-button"><a class="link" href="https://nikitoo07.github.io/perfumes-demo/"
+                    target="_blank">Catalogo de perfumes</a></button>
         </section>
         <section>
             <h2>Formación y recursos</h2>
             <div class="resources-list">
-                <a href="https://www.freecodecamp.org/nikoo0" target="_blank" rel="noopener">Mi perfil en freeCodeCamp</a>
+                <a href="https://www.freecodecamp.org/nikoo0" target="_blank" rel="noopener">Mi perfil en
+                    freeCodeCamp</a>
                 <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a>
             </div>
         </section>
@@ -325,4 +377,5 @@ html { transition: background-color .25s ease, color .25s ease; }
         <p>© 2025 Niko. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
